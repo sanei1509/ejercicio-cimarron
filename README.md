@@ -26,7 +26,7 @@ Gestión de información sobre los `empleados de una empresa`
 - Salario actual:
   - despúes de 3 años de antiguedad -> [salario inicial] + ( 8% \* cantidad de años encima de los 3).
 
-# Funcionalidades sobre el almacenameinto (db)
+# Funcionalidades sobre el almacenamiento (db)
 
 - altas (create)
 - bajas (delete)

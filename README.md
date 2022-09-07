@@ -1,48 +1,23 @@
-# Propuesta del ejercicio
+# App para gestionar los empleado de una empresa
 
-realizar una aplicación (web)
+| Web spa (de solo una página) visualizado en una tabla donde poder dar altas, bajas y modificar los empleados
 
-# Realidad de la aplicación
+## funcionalidades
 
-Gestión de información sobre los `empleados de una empresa`
-
-# Funcionalidades de la app
-
-`Listar los empleados`(columnas) mostrando los siguientes datos:
-
-- Nombre
-- Apellido
-- Fecha de nacimiento
-- Documento de identidad (C.I)
-- Salario inicial
-- Fecha de ingreso
-
-# Lógica (calculos a realizar)
-
-| también se deben mostrar estos datos en la app
-
-- Edad = año actual - año de nacimiento
-- Antiguedad = año actual - año de ingreso
-- Salario actual:
-  - despúes de 3 años de antiguedad -> [salario inicial] + ( 8% \* cantidad de años encima de los 3).
-
-# Funcionalidades sobre el almacenamiento (db)
-
-metodos http a realizar sobre nuestro recurso en este caso (db)
-
-- altas (create), en http protocol = (POST)
-- bajas (delete), en http protocol = (DELETE)
-- modificaciones (update) en http = (PUT)
+- podras:
+  `añadir` nuevos empleados
+  `eliminar` empleados
+  `modificar` empleados
 
 ## Tecnologías
 
-| Base de datos
+| **Base de datos**
 
-- Xamp -> servidor local
+- `Xamp` -> servidor local
 
 - `MySQL` -> desde interfaz de phpmyadmin ( local )
 
-|Api
+| **Api** / **Backend**
 
 - `Insomnia` para testear los endpoints de mi api
 
@@ -50,13 +25,9 @@ metodos http a realizar sobre nuestro recurso en este caso (db)
   - mysql (paquete de node)
 - `Express JS` (framework que simplifica el desarrollo del backend)
 
-|Lógica
+| **Vista** / **Frontend**
 
-- Javascript
-
-|Vista
-
-- Vuejs/framework o Bootstrap (depende del tiempo)
+- `Vue JS`/ framework o Bootstrap (depende del tiempo)
 
 # Instalaciones necesarias
 

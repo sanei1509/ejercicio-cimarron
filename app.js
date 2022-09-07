@@ -3,8 +3,14 @@ const { table } = require("console");
 const express = require("express");
 const mysql = require("mysql2");
 
+// dotenv config
+require("dotenv").config({ path: "./.env" });
+
 // acceso a metodos y funciones de express
 app = express();
+
+// especificamos el formato a trabajar
+app.use(express.json());
 
 // SET conexión a la base de datos
 const conexion = mysql.createConnection({
@@ -34,7 +40,24 @@ app.get("/empleados", (req, res) => {
 });
 
 // crear empleados
-app.post("");
+app.post("/empleados", (req, res) => {
+  let data = {
+    nombre: req.body.nombre,
+    apellido: req.body.apellido,
+    nacimiento: req.body.nacimiento,
+    documento: req.body.documento,
+    salario: req.body.salario,
+    ingreso: req.body.ingreso,
+  };
+  let sql = "INSERT INTO empleados SET ?";
+
+  conexion.query(sql, data, function (error, resultados) {
+    if (error) console.log("Error en el POST", error);
+    else {
+      res.send(resultados);
+    }
+  });
+});
 
 // TEST conexión a la base de datos
 conexion.connect(function (error) {

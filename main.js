@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 // VARIABLES GLOBALES
 const URL_API = "http://localhost:3001/empleados";
 
@@ -47,11 +45,14 @@ const listar = (empleados) => {
 						<td>${empleado.salario}<td>
 						<td>${empleado.ingreso}<td>
 					<tr>`;
+
+    // despues de formateada la información la
+    contenedor.innerHTML = resultados;
   });
 };
 
 // OBTENER & MOSTRAR DATOS DE NUESTRA API
-fetch(url)
+fetch(URL_API)
   .then((respuesta) => respuesta.json())
   .then((contenido) => listar(contenido))
   .catch((error) => console.log(error));

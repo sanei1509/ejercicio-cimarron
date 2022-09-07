@@ -80,12 +80,30 @@ npm install mysql
 
 # Instrucciones de uso
 
-## 1 Iniciar la app
+## 0 Clonar repositorio de github y moverse al directorio
 
-- necesario por variable de entorno el puerto
+```bash
+git clone https://github.com/sanei1509/ejercicio-cimarron.git
+
+cd ejercicio-cimarron
+```
+
+## 1 instalar dependencias del package-json necesarias para correr la aplicación
 
 ```
-PUERTO=3001 node app.js
+npm install
+```
+
+## 2 Iniciar la app
+
+- puerto a elección desde archivo `.env`
+- `default 3000`
+
+```bash
+node app.js
+
+======= O ====
+PUERTO=3330 node app.js
 ```
 
 # Autor

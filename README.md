@@ -1,4 +1,4 @@
-# App para gestionar los empleado de una empresa
+# Gestión de empleados de una empresa (app)
 
 | Web spa (de solo una página) visualizado en una tabla donde poder dar altas, bajas y modificar los empleados
 

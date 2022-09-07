@@ -5,9 +5,9 @@
 ## funcionalidades
 
 - podras:
-  `añadir` nuevos empleados
-  `eliminar` empleados
-  `modificar` empleados
+  - `añadir` nuevos empleados
+  - `eliminar` empleados
+  - `modificar` empleados
 
 ## Tecnologías
 

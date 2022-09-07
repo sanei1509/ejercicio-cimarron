@@ -34,7 +34,21 @@ Gestión de información sobre los `empleados de una empresa`
 
 ## Tecnologías
 
-| aún por decidir
+| Base de datos
+
+- MySQL
+
+|Api
+
+- NodeJS
+
+|Lógica
+
+- Javascript
+
+|Vista
+
+- Vuejs/framework o Bootstrap (depende del tiempo)
 
 # Autor
 

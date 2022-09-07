@@ -38,6 +38,8 @@ metodos http a realizar sobre nuestro recurso en este caso (db)
 
 | Base de datos
 
+- Xamp -> servidor local
+
 - `MySQL` -> desde interfaz de phpmyadmin ( local )
 
 |Api

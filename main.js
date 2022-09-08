@@ -1,7 +1,7 @@
 // VARIABLES GLOBALES
-const URL_API = "http://localhost:3001/empleados";
+const URL_API = "http://localhost:3001/empleados/";
 
-const contenedor = document.querySelector("tbdody");
+const contenedor = document.querySelector("tbody");
 let resultados = "";
 
 const MODAL = new bootstrap.Modal(document.getElementById("modal_empleados"));
@@ -15,6 +15,8 @@ const nacimiento = document.getElementById("nacimiento");
 const documento = document.getElementById("documento");
 const salario = document.getElementById("salario");
 const ingreso = document.getElementById("ingreso");
+
+console.log(nombre, apellido, nacimiento, documento);
 
 // CAPTURAMOS EL 'CLICK' PARA ABRIR EL MODAL
 btn_crear_empleado.addEventListener("click", () => {
@@ -35,21 +37,26 @@ btn_crear_empleado.addEventListener("click", () => {
 // FUNCIONES
 const listar = (empleados) => {
   // iteramos sobre los empleados
+  //   <td>${empleado.id}</td>;
+  resultados = "";
   empleados.forEach((empleado) => {
-    resultados += `<tr> 
-						<td>${empleado.id}<td> 
-						<td>${empleado.nombre}<td> 
-						<td>${empleado.apellido}<td> 
-						<td>${empleado.nacimiento}<td>
-						<td>${empleado.documento}<td>
-						<td>${empleado.salario}<td>
-						<td>${empleado.ingreso}<td>
-					<tr>`;
+    resultados += `
+	<tr> 
+		<td>${empleado.nombre}</td> 
+		<td>${empleado.apellido}</td> 
+		<td>${empleado.nacimiento}</td>
+		<td>${empleado.documento}</td>
+		<td>${empleado.salario}</td>
+		<td>${empleado.ingreso}</td>
+		<td class="text-center"><a href="#">Editar<a> <a href="#">Eliminar</a></td>
+	<tr>`;
 
     // despues de formateada la información la
     contenedor.innerHTML = resultados;
   });
 };
+
+// const crear = () =
 
 // OBTENER & MOSTRAR DATOS DE NUESTRA API
 fetch(URL_API)

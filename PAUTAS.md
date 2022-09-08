@@ -34,3 +34,17 @@ metodos http a realizar sobre nuestro recurso en este caso (db)
 - obtener empleados (`read`), en http protocol = (`GET`)
 - modificaciones (`update`) en http = (`PUT`)
 - bajas (`delete`), en http protocol = (`DELETE`)
+
+# Muestra de los datos en el frontend
+
+`Javascript vanilla` con `Fetch`
+
+## Fetch
+
+- api para comunicarnos con nuestros enpoints
+
+## Pasos
+
+1. Comunicación y parseo de la data obtenida de los endpoint de la api.
+2. Creamos funciones con la data obtenida y lista para utilizar.
+3.

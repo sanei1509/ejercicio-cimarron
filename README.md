@@ -27,7 +27,7 @@
 
 | **Vista** / **Frontend**
 
-- `Vue JS`/ framework o Bootstrap (depende del tiempo)
+- `Javascript Vanilla`/ Bootstrap (depende del tiempo)
 
 # Instalaciones necesarias
 
@@ -76,6 +76,12 @@ node app.js
 ======= O ====
 PUERTO=3330 node app.js
 ```
+
+## 3 Luego de asegurarse que esto este corriendo en su computador
+
+donde se va a utilizar los datos que brindamos desde la api
+
+open this link ->
 
 # Autor
 

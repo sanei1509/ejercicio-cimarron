@@ -15,6 +15,7 @@ const nacimiento = document.getElementById("nacimiento");
 const documento = document.getElementById("documento");
 const salario = document.getElementById("salario");
 const ingreso = document.getElementById("ingreso");
+let opcion = "";
 
 // CAPTURAMOS EL 'CLICK' PARA ABRIR EL MODAL
 btn_crear_empleado.addEventListener("click", () => {
@@ -44,7 +45,6 @@ const listar = (empleados) => {
     if (antiguedad > 3) {
       let años_pasados = antiguedad - 3;
       incremento = ((empleado.salario * 8) / 100) * años_pasados;
-      console.log(incremento);
     }
     let salario_actual = empleado.salario + incremento;
     resultados += `
@@ -55,17 +55,44 @@ const listar = (empleados) => {
 		<td>${empleado.documento}</td>
 		<td>${empleado.salario}</td>
 		<td>${empleado.ingreso}</td>
-		<td class="text-center"><a href="#">Editar<a> <a href="#">Eliminar</a></td>
+		<td class="text-center"><a class="btnEditar btn btn-dark">Editar<a> <a href="#" class="btnBorrar btn btn-danger">Eliminar</a></td>
 		<td>${edad}</td>
 		<td>${antiguedad}</td>
 		<td>${salario_actual}</td>
-		<td>
 	<tr>`;
 
     // despues de formateada la información insertamos en el contenido de nuestra tabla
     contenedor.innerHTML = resultados;
   });
 };
+
+// CREAR Y EDITAR empleado
+form_empleado.addEventListener("submit", (e) => {
+  e.preventDefault();
+  //Podrría haber usado el mismo modal para editar
+  fetch(URL_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nombre: nombre.value,
+      apellido: apellido.value,
+      nacimiento: nacimiento.value,
+      documento: documento.value,
+      salario: salario.value,
+      ingreso: ingreso.value,
+    }),
+  })
+    .then((respuesta) => respuesta.json())
+    .then((data) => {
+      const nuevoArticulo = [];
+      nuevoArticulo.push(data);
+      listar(nuevoArticulo);
+    });
+
+  location.reload();
+});
 
 // TRABAJAMOS SOBRE EL CONTENIDO OBTENIDO DE NUESTRA API
 fetch(URL_API)
